@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3 panel-default">
+     <div class="panel-heading">Info Center</div>
+      <div class="panel-body">
+        <p>Click ￼ icons to get more information!</p>
+      </div>
+    </div>
+
+    <div class="col-xs-9 panel-default">
+      <div class="panel-heading">EDIT AN ADULT HOUSEHOLD MEMBER</div>
+      <div class="panel-body">
+<div class="container">
+<form role="form" ng-submit="editAdult(adult)">
+    <div class="form-group spacing firstRow">
+     <label for="firstname">First Name</label><br>
+	<input type="text" ng-model="adult.firstname" id="firstname" class="form-control">
+    </div>
+    <div class="form-group spacing firstRow">
+      <label for="lastname">Last Name</label><br>
+	<input type="text" ng-model="adult.lastname" id="lastname" class="form-control">
+    </div>
+	<input type="submit" value="Edit adult">
+</form>
+</div>
+
+
+<div class="form-group row">
+<div class="inline-block">
+    <div class="clearfix"> 
+      <div class="btn-group inline pull-right" data-toggle="buttons-checkbox">
+        <a ui-sref="form.adultsInHousehold1" class="btn btn-info">
+      <span class="glyphicon glyphicon glyphicon-backward"></span>
+      Back
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+  </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+

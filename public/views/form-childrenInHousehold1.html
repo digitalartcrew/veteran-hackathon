@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3 panel-default">
+     <div class="panel-heading">Info Center</div>
+      <div class="panel-body">
+        <p>Click ￼ icons to get more information!</p>
+      </div>
+    </div>
+
+    <div class="col-xs-9 panel-default">
+      <div class="panel-heading">CHILDREN IN HOUSEHOLD</div>
+      <div class="panel-body">
+<center>
+<p ng-hide="children">No child household members currently added yet!</p>
+<p>The following children have been added to the household</p>
+<div class="col-md-10-offset-1">
+<table style="width:100%">
+  <tr>
+    <th>NAME OF CHILD</th>
+    <th>STUDENT?</th>    
+    <th>FREQUENCY</th>
+    <th>AGE</th>
+    <th>ETHNICITY</th>
+    <th>STATUS</th>
+  </tr>
+  <tr ng-repeat="child in children">
+    <td>{{child.firstname}} {{child.lastname}}</td>
+    <td>{{child.student}}</td>    
+    <td>{{child.frequency}}</td>
+    <td>{{child.age}}</td>
+    <td>{{child.ethnicity}}</td>
+    <td>{{child.status}}</td>
+    <td><a ui-sref="form.child-edit"><button>Edit</button></a></td>
+    <td><button ng-click="deleteChild(child)">Delete</button></td>
+  </tr>
+ 
+</table>
+</div>
+
+
+
+
+
+
+
+<a ui-sref="form.child-new"><button>Add Child</button></a>
+</center>
+
+<div class="form-group row">
+<div class="inline-block">
+    <div class="clearfix"> 
+      <div class="btn-group inline pull-right" data-toggle="buttons-checkbox">
+        <a ui-sref="form.childStatus2" class="btn btn-info">
+      <span class="glyphicon glyphicon glyphicon-backward"></span>
+      Back
+      </a>
+
+      <a ui-sref="#" class="btn btn-info">
+      Save<span class="glyphicon glyphicon glyphicon-save"></span>
+      </a>
+      <a ui-sref="form.adultsInHousehold1" class="btn btn-info">
+      Continue<span class="glyphicon glyphicon-forward"></span>
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+  </div>
+      </div>
+    </div>
+  </div>

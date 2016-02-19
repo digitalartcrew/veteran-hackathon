@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3 panel-default">
+     <div class="panel-heading">Info Center</div>
+      <div class="panel-body">
+        <p>Click ￼ icons to get more information!</p>
+      </div>
+    </div>
+
+    <div class="col-xs-9 panel-default">
+      <div class="panel-heading">ADULT CONTACT INFORMATION</div>
+      <div class="panel-body">
+<!-- <h1>Adult Info 2</h1> -->
+
+<h4>Signature of Adult Completing Application (required)</h4>
+<h5>The person signing is furnishing true information and to advise that person that the application is being made in connection with the receipt of Federal funds; School officials may verify the information on the application; Deliberate misrepresentation of the information may subject the applicant to prosecution under State and Federal statutes.</h5>
+<div class="inputGroup">    
+    <div class="form-group spacing firstRow" id="">
+      <label for="signature">ENTER NAME (e-signature)</label>
+      <input type="signature" class="form-control" id="signature">
+    </div>
+    <div class="form-group spacing" id="daytime">
+      <label for="date">TODAY'S DATE</label>
+      <input type="date" class="form-control" id="date">
+    </div>
+</div>
+<h2>Signature Test</h2>
+<div ng-controller="SignatureController">
+    <div>items length: {{items.length}}</div>
+    <img ng-src="{{hash}}" alt="signature image" />
+    <j-signature-directive sig="customSignature" save="testAction" bg-color="#00f" color="#ffcc00"></j-signature-directive>
+</div>
+
+<div class="form-group row">
+
+    <div class="inline-block">
+        <div class="clearfix"> 
+          <div class="btn-group inline pull-right" data-toggle="buttons-checkbox">
+
+          <a ui-sref="form.adultContactInfo1" class="btn btn-info">
+      <span class="glyphicon glyphicon glyphicon-backward"></span>
+      Back
+      </a>
+
+          <a ui-sref="#" class="btn btn-info">
+          Save<span class="glyphicon glyphicon glyphicon-save"></span>
+          </a>
+          <a ui-sref="form.assistanceProgram1" class="btn btn-info">
+          Continue<span class="glyphicon glyphicon-forward"></span>
+          </a>
+          </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+      </div>
+    </div>
+  </div>
+<!-- <div class="col-xs-6 col-xs-offset-3"> -->
+    <!-- <a ui-sref="form.assistanceProgram1" class="btn btn-block btn-info">
+   Continue<span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a> -->
+    <!-- <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Date</span>
+      <input type="date" class="form-control" placeholder="date" aria-describedby="basic-addon1" name="">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">High</span>
+      <textarea type="text" class="form-control" placeholder="high-point" aria-describedby="basic-addon1" name="post"></textarea>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Low</span>
+      <textarea type="text" class="form-control" placeholder="low-point" aria-describedby="basic-addon1" name="post"></textarea>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Improvements</span>
+      <input type="text" class="form-control" placeholder="improvements" aria-describedby="basic-addon1" name="post[improvements]">
+    </div> -->
+
+<!-- </div> -->
+<!-- </div> -->
+

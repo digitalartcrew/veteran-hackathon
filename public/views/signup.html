@@ -1,0 +1,15 @@
+<!--  <div>
+ 	<vid-bg resources="resources" poster="poster" full-screen="fullScreen" muted="muted" z-index="zIndex" play-info="playInfo" pause-play="pausePlay"></vid-bg>
+ </div> -->
+ <div class="container">
+      <form class="form-signin">
+   			<center>
+      <!--   	<img id="logo" src="../img/lime.png"> -->
+  <input placeholder="username" id="username" ng-model="user.username" class="form-control" required autofocus>
+  <input placeholder="password" id="password" ng-model="user.password" type="password" class="form-control" required autofocus>
+  <input placeholder="Enter Password Again" id="password2" ng-model="user.password2" type="password" class="form-control" required autofocus>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signup(user)">Sign Up</button>
+   <p>Click Here to <a href="#login">Login</a></p>
+        </center>
+      </form>
+    </div> <!-- /container -->
