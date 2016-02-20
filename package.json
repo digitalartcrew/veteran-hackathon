@@ -1,7 +1,7 @@
 {
-  "name": "lunch-ux-hackathon",
+  "name": "veteran-hackathon",
   "version": "1.0.0",
-  "description": "Lunch UX Hackathon",
+  "description": "Veteran Hackathon",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

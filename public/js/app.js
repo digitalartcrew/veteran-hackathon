@@ -1,4 +1,4 @@
-var app = angular.module("LunchApp", ["ngVidBg", "ngAnimate","ui.router",'ngResource']);
+var app = angular.module("VeteranApp", ["ngVidBg", "ngAnimate","ui.router",'ngResource']);
 
 app.config(function($stateProvider,$urlRouterProvider) {
   
@@ -30,172 +30,49 @@ app.config(function($stateProvider,$urlRouterProvider) {
     controller: 'WelcomeCtrl'
   })
   
-  // url will be /form/statements
-  .state('form.statements', {
-    url: '/statements',
-    templateUrl: 'views/form-statements.html'
+
+  .state('form.profile', {
+    url: '/profile',
+    templateUrl: 'views/form-profile.html',
+    controller: 'ProfileCtrl'
   })
 
-  .state('form.adultContactInfo1', {
-    url: '/adultContactInfo1',
-    templateUrl: 'views/form-adultContactInfo1.html',
-    controller: "MainAdultController"
+  .state('form.education', {
+    url: '/education',
+    templateUrl: 'views/form-education.html',
+    controller: "EducationCtrl"
   })
 
-  .state('form.adultContactInfo2', {
-    url: '/adultContactInfo2',
-    templateUrl: 'views/form-adultContactInfo2.html'
+  .state('form.veteranmentornetwork', {
+    url: '/veteranmentornetwork',
+    templateUrl: 'views/form-vetmentor.html',
+    controller: 'VeteranMentorCtrl'
   })
 
-  .state('form.assistanceProgram1', {
-    url: '/assistanceProgram1',
-    templateUrl: 'views/form-assistanceProgram1.html',
-    controller: 'AssistCtrl'
+  .state('form.jobsearch', {
+    url: '/jobsearch',
+    templateUrl: 'views/form-jobsearch.html',
+    controller: 'JobSearchCtrl'
   })
 
-  .state('form.assistanceProgram2', {
-    url: '/assistanceProgram2',
-    templateUrl: 'views/form-assistanceProgram2.html'
+  .state('form.entrepreneurship', {
+    url: '/entrepreneurship',
+    templateUrl: 'views/form-entrepreneur.html',
+    controller: 'EntrepreneurCtrl'
   })
 
-  .state('form.childStatus1', {
-    url: '/childStatus1',
-    templateUrl: 'views/form-childStatus1.html'
+  .state('form.housing', {
+    url: '/housing',
+    templateUrl: 'views/form-housing.html',
+    controller: 'HousingCtrl'
   })
 
-  .state('form.childStatus2', {
-    url: '/childStatus2',
-    templateUrl: 'views/form-childStatus2.html'
+  .state('form.healthcare', {
+    url: '/healthcare',
+    templateUrl: 'views/form-healthcare.html',
+    controller: 'HealthCtrl'
   })
 
-  .state('form.childrenInHousehold1', {
-    url: '/childrenInHousehold1',
-    templateUrl: 'views/form-childrenInHousehold1.html',
-    controller: 'ChildrenController'
-  })
-
-  .state('form.adultsInHousehold1', {
-    url: '/adultsInHousehold1',
-    templateUrl: 'views/form-adultsInHousehold1.html',
-    controller: 'AdultsController'
-  })
-
-  .state('form.adultsInHousehold2', {
-    url: '/adultsInHousehold2',
-    templateUrl: 'views/form-adultsInHousehold2.html'
-  })
-
-  .state('form.adultsInHousehold3', {
-    url: '/adultsInHousehold3',
-    templateUrl: 'views/form-adultsInHousehold3.html'
-  })
-
-  .state('form.adultsInHousehold4', {
-    url: '/adultsInHousehold4',
-    templateUrl: 'views/form-adultsInHousehold4.html'
-  })
-
-  .state('form.income1', {
-    url: '/income1',
-    templateUrl: 'views/form-income1.html',
-    controller: 'ChildrenController'
-  })
-
-  .state('form.income2', {
-    url: '/income2',
-    templateUrl: 'views/form-income2.html'
-  })
-
-  .state('form.income3', {
-    url: '/income3',
-    templateUrl: 'views/form-income3.html',
-    controller: "AdultsController"
-  })
-
-  .state('form.income4', {
-    url: '/income4',
-    templateUrl: 'views/form-income4.html'
-  })
-
-  .state('form.income5', {
-    url: '/income5',
-    templateUrl: 'views/form-income5.html'
-  })
-
-  .state('form.income6', {
-    url: '/income6',
-    templateUrl: 'views/form-income6.html'
-  })
-
-  .state('form.income7', {
-    url: '/income7',
-    templateUrl: 'views/form-income7.html'
-  })
-
-  .state('form.income8', {
-    url: '/income8',
-    templateUrl: 'views/form-income8.html'
-  })
-
-  .state('form.income9', {
-    url: '/income9',
-    templateUrl: 'views/form-income9.html'
-  })
-
-
-  .state('form.review', {
-    url: '/review',
-    templateUrl: 'views/form-review.html',
-    controller: "ReviewController"
-  })
-
-  // .state('form.adults', {
-  //   url: '/adults',
-  //   controller: "MainAdultController",
-  //   templateUrl: "views/form-adultContactInfo1.html"
-  // })
-
-  .state('form.adults-new', {
-    url: '/adults/new',
-    controller: "NewAdultController",
-    templateUrl: "views/a-new.html"
-  })
-
-  .state('form.adults-single', {
-    url: '/adults/:id',
-    controller: "AdultController",
-    templateUrl: "views/a-show.html"
-  })
-
-  .state('form.adults-edit', {
-    url: '/adults/:id/edit',
-    controller: "EditAdultController",
-    templateUrl: "views/a-edit.html"
-  })
-
-  .state('form.children', {
-    url: '/children',
-    controller: "ChildrenController",
-    templateUrl: "views/form-ChildContactInfo1.html"
-  })
-
-  .state('form.child-new', {
-    url: '/children/new',
-    controller: "NewChildController",
-    templateUrl: "views/c-new.html"
-  })
-
-  .state('form.child-single', {
-    url: '/children/:id',
-    controller: "ChildController",
-    templateUrl: "views/c-show.html"
-  })
-
-  .state('form.child-edit', {
-    url: '/children/:id/edit',
-    controller: "EditChildController",
-    templateUrl: "views/c-edit.html"
-  })
 
   $urlRouterProvider.otherwise('login');
   });
