@@ -22,3 +22,7 @@ app.service("MentorService",['$resource', function($resource){
     
 }]);
 
+app.service("EventService",['$resource', function($resource){
+    
+}]);
+

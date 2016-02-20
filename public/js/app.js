@@ -43,6 +43,12 @@ app.config(function($stateProvider,$urlRouterProvider) {
     controller: "EducationCtrl"
   })
 
+   .state('form.events', {
+    url: '/events',
+    templateUrl: 'views/form-events.html',
+    controller: "EventsCtrl"
+  })
+
   .state('form.veteranmentornetwork', {
     url: '/veteranmentornetwork',
     templateUrl: 'views/form-vetmentor.html',

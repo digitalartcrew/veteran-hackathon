@@ -81,6 +81,10 @@ app.controller("EducationCtrl", function($scope, $location, EducationService, $s
 
 });
 
+app.controller("EventsCtrl", function($scope, $location, EventService, $state){
+
+});
+
 app.controller("JobSearchCtrl", function($scope, $location, JobService, $state){
 
 });
